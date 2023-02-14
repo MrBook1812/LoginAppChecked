@@ -8,6 +8,7 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
+    
     @IBOutlet var welocomeLabel: UILabel!
     @IBOutlet var hiLabel: UILabel!
     
@@ -23,5 +24,6 @@ final class WelcomeViewController: UIViewController {
         dismiss(animated: true)
         
     }
+    
     
 }

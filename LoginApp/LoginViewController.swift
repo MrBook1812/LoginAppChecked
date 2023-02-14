@@ -25,6 +25,19 @@ final class LoginViewController: UIViewController {
     
     
     @IBAction func logInButtonTapped() {
+        guard let inputText = userNameLabel.text, !inputText.isEmpty else {
+            wrongPassword(with: "UserName is empty", andmessage: "Please try again")
+            return
+        }
+        guard let inputText = passwordLabel.text, !inputText.isEmpty else {
+            wrongPassword(with: "Password is empty", andmessage: "Please try again")
+            return
+        }
+        if userNameLabel.text == "Alex" && passwordLabel.text == "1" {
+            return
+        } else {
+            wrongPassword(with: "Incorrect username or password", andmessage: "Please try again")
+        }
     }
     
     @IBAction func forgotUserNameButtonTapped() {
@@ -54,6 +67,14 @@ extension LoginViewController {
     private func showPass(with title: String, andmessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Oh, yes!", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    private func wrongPassword(with title: String, andmessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordLabel.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
