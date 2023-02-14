@@ -19,7 +19,6 @@ final class WelcomeViewController: UIViewController {
         welocomeLabel.text = "Hello, \(String(welcomeUser))"
         hiLabel.text = "👋"
         setGradientBackground()
-
     }
     
     func setGradientBackground() {
