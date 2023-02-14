@@ -11,6 +11,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameLabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,6 +39,8 @@ final class LoginViewController: UIViewController {
         userNameLabel.text = ""
         passwordLabel.text = ""
     }
+   
+
 }
 
 // MARK: - UIAlertController
