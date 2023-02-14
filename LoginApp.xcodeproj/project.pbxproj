@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CF32259E299A070A00F2183F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32259D299A070A00F2183F /* AppDelegate.swift */; };
 		CF3225A0299A070A00F2183F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF32259F299A070A00F2183F /* SceneDelegate.swift */; };
-		CF3225A2299A070A00F2183F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3225A1299A070A00F2183F /* ViewController.swift */; };
+		CF3225A2299A070A00F2183F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3225A1299A070A00F2183F /* LoginViewController.swift */; };
 		CF3225A5299A070A00F2183F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3225A3299A070A00F2183F /* Main.storyboard */; };
 		CF3225A7299A070C00F2183F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3225A6299A070C00F2183F /* Assets.xcassets */; };
 		CF3225AA299A070C00F2183F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3225A8299A070C00F2183F /* LaunchScreen.storyboard */; };
+		CF5F60D3299B821800CFD993 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F60D2299B821800CFD993 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF32259A299A070A00F2183F /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF32259D299A070A00F2183F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF32259F299A070A00F2183F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF3225A1299A070A00F2183F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF3225A1299A070A00F2183F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CF3225A4299A070A00F2183F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF3225A6299A070C00F2183F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3225A9299A070C00F2183F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3225AB299A070C00F2183F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF5F60D2299B821800CFD993 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				CF32259D299A070A00F2183F /* AppDelegate.swift */,
 				CF32259F299A070A00F2183F /* SceneDelegate.swift */,
-				CF3225A1299A070A00F2183F /* ViewController.swift */,
+				CF3225A1299A070A00F2183F /* LoginViewController.swift */,
+				CF5F60D2299B821800CFD993 /* WelcomeViewController.swift */,
 				CF3225A3299A070A00F2183F /* Main.storyboard */,
 				CF3225A6299A070C00F2183F /* Assets.xcassets */,
 				CF3225A8299A070C00F2183F /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3225A2299A070A00F2183F /* ViewController.swift in Sources */,
+				CF3225A2299A070A00F2183F /* LoginViewController.swift in Sources */,
+				CF5F60D3299B821800CFD993 /* WelcomeViewController.swift in Sources */,
 				CF32259E299A070A00F2183F /* AppDelegate.swift in Sources */,
 				CF3225A0299A070A00F2183F /* SceneDelegate.swift in Sources */,
 			);
@@ -293,8 +297,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Kniga.LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +328,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Kniga.LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
