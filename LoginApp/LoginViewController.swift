@@ -30,6 +30,11 @@ final class LoginViewController: UIViewController {
     @IBAction func forgotPasswordButtonTapped() {
         showPass(with: "Your Password is:", andmessage: "1")
     }
+    
+    @IBAction  func unwind(for segue: UIStoryboardSegue) {
+        userNameLabel.text = ""
+        passwordLabel.text = ""
+    }
 }
 
 // MARK: - UIAlertController

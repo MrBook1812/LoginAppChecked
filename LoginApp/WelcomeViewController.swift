@@ -7,23 +7,21 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
+    @IBOutlet var welocomeLabel: UILabel!
+    @IBOutlet var hiLabel: UILabel!
+    
+    var welcomeUser: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        welocomeLabel.text = "Hello, \(String(welcomeUser))"
+        hiLabel.text = "👋"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logOutButtonTapped() {
+        dismiss(animated: true)
+        
     }
-    */
-
+    
 }
