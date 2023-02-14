@@ -27,12 +27,16 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfD-mu-LNp">
                                         <rect key="frame" x="0.0" y="46" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzo-9M-f9P">
                                         <rect key="frame" x="0.0" y="92" width="260" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                        <connections>
+                                            <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKD-SW-BFo"/>
+                                            <segue destination="TFQ-0g-OEF" kind="presentation" modalPresentationStyle="fullScreen" id="vHP-LX-97X"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -49,6 +53,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotUserNameButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8e-Tk-lnZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyA-ie-AXy">
                                 <rect key="frame" x="182.5" y="323.5" width="121.5" height="28"/>
@@ -63,6 +70,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cwr-Bt-KHf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,7 +90,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="TFQ-0g-OEF" kind="presentation" modalPresentationStyle="fullScreen" id="GvH-TW-6x0"/>
+                        <outlet property="passwordLabel" destination="HfD-mu-LNp" id="pRo-Gu-uD5"/>
+                        <outlet property="userNameLabel" destination="IOi-ge-sJn" id="v84-3B-wxx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,6 +129,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutButtonTapped" destination="TFQ-0g-OEF" eventType="touchUpInside" id="yIH-Ia-sOb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rSb-Xe-kJ4"/>
@@ -130,6 +144,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eic-ot-wiD"/>
+                    <connections>
+                        <outlet property="hiLabel" destination="UWe-i7-WcH" id="0cY-oN-Gh0"/>
+                        <outlet property="welocomeLabel" destination="hq0-4h-LB2" id="kzV-Ee-sPr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpF-P6-jm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
